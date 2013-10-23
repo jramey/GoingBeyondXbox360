@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoingBeyond", "GoingBeyond\GoingBeyond\GoingBeyond.csproj", "{814CF2E5-0E63-43B1-9644-7C0BD7001F9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoingBeyondContent", "GoingBeyond\GoingBeyondContent\GoingBeyondContent.contentproj", "{A55265A1-E0A2-406B-9DF3-857C1D659700}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{814CF2E5-0E63-43B1-9644-7C0BD7001F9E}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{814CF2E5-0E63-43B1-9644-7C0BD7001F9E}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{814CF2E5-0E63-43B1-9644-7C0BD7001F9E}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
+		{814CF2E5-0E63-43B1-9644-7C0BD7001F9E}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{814CF2E5-0E63-43B1-9644-7C0BD7001F9E}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{814CF2E5-0E63-43B1-9644-7C0BD7001F9E}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
+		{A55265A1-E0A2-406B-9DF3-857C1D659700}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{A55265A1-E0A2-406B-9DF3-857C1D659700}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
