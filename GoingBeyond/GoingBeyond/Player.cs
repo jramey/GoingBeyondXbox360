@@ -82,7 +82,7 @@ namespace GoingBeyond
                 {
                     BulletList[i].Direction = Ship.RotationMatrix.Forward;
                     BulletList[i].Speed = GameConstants.BulletSpeedAdjustment;
-                    BulletList[i].postion = Ship.Position + (200 * BulletList[i].Direction);
+                    BulletList[i].Postion = Ship.Position + (200 * BulletList[i].Direction);
                     BulletList[i].IsActive = true;
                     break;
                 }
@@ -133,7 +133,7 @@ namespace GoingBeyond
                     {
                         if (BulletList[j].IsActive)
                         {
-                            var bulletSphere = new BoundingSphere(BulletList[j].postion, bulletRadius);
+                            var bulletSphere = new BoundingSphere(BulletList[j].Postion, bulletRadius);
 
                             if (enemySphere.Intersects(bulletSphere))
                             {
