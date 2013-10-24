@@ -104,11 +104,6 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
-    <Compile Include="Models\asteroid1.x">
-      <Name>asteroid1</Name>
-      <Importer>XImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
     <Compile Include="Models\fighter.fbx">
       <Name>fighter</Name>
       <Importer>FbxImporter</Importer>
@@ -141,6 +136,13 @@
   <ItemGroup>
     <Compile Include="Textures\Ship.jpg">
       <Name>Ship</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\power.jpg">
+      <Name>power</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

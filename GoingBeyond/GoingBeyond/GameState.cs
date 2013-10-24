@@ -7,8 +7,9 @@ namespace GoingBeyondGame
 {
     public enum GameState
     {
-        TitleScreen = 0,
-        GameStarted = 1,
-        GameEnded = 2
+        TitleScreen,
+        GameStarted,
+        GameEnded,
+        Loading
     }
 }

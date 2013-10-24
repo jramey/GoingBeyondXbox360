@@ -4,13 +4,12 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using GoingBeyondGame;
 
-namespace GoingBeyond4
+namespace GoingBeyond
 {
     public class Ship
     {
         private const float VelocityScale = 5.0f;
         public Boolean IsActive { get; set; }
-        public Model Model;
         public Matrix[] Transforms;
         public Vector3 Position = Vector3.Zero;
         public Vector3 Velocity = Vector3.Zero;
