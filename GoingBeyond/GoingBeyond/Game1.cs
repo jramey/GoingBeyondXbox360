@@ -128,7 +128,7 @@ namespace GoingBeyondGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            if (player != null && player.AvatarRenderer.State == AvatarRendererState.Ready)
+            if (player != null && player.CurrentGameState != GameState.GameStarted && player.AvatarRenderer.State == AvatarRendererState.Ready)
             {
                 player.CurrentAvatarAnimation.Update(gameTime.ElapsedGameTime, true);
                 BonesToWorldSpace(player.AvatarRenderer, player.CurrentAvatarAnimation, bonesWorldSpace);
@@ -176,6 +176,12 @@ namespace GoingBeyondGame
 
             if (TitleScreenIsDisplayed(currentState))
                 StartGame();
+
+            if (player.CurrentGameState == GameState.GameEnded && currentState.Buttons.A == ButtonState.Pressed && lastState.Buttons.A == ButtonState.Released)
+            { 
+                player = new Player(Gamer.SignedInGamers[PlayerIndex.One]);
+                StartGame();
+            }
             
             if (player.Ship.IsActive && currentState.Triggers.Left > 0)
                 player.Ship.Velocity *= 1.05f;

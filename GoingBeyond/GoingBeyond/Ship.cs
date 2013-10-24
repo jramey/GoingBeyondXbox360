@@ -20,8 +20,7 @@ namespace GoingBeyond
         {
             this.IsActive = false;
         }
-
-
+        
         public float Rotation
         {
             get { return rotation; }

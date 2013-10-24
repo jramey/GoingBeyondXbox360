@@ -198,7 +198,8 @@ namespace GoingBeyond
         {
             avatarDescription = AvatarDescription.EndGetFromGamer(result);
             
-            AvatarRenderer = new AvatarRenderer(avatarDescription);}
+            AvatarRenderer = new AvatarRenderer(avatarDescription);
+        }
 
         private void LoadBulletList()
         {
