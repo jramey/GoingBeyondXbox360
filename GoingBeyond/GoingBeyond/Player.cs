@@ -54,13 +54,16 @@ namespace GoingBeyond
             Ship.Velocity *= 0.95f;
 
             for (int i = 0; i < GameConstants.NumberOfEnemyShip; i++)
-                EnemyShipList[i].Update(timeDelta, Ship.Position);
+                if (Ship.IsActive)
+                    EnemyShipList[i].Update(timeDelta, Ship.Position);
+                else
+                    EnemyShipList[i].Update(timeDelta, new Vector3(GameConstants.PlayfieldSizeX, GameConstants.PlayfieldSizeY, 0));
 
-            for (int i = 0; i < GameConstants.NumBullets; i++)
-            {
-                if (BulletList[i].IsActive)
-                    BulletList[i].Update(timeDelta);
-            }
+                    for (int i = 0; i < GameConstants.NumBullets; i++)
+                    {
+                        if (BulletList[i].IsActive)
+                            BulletList[i].Update(timeDelta);
+                    }
         }
 
         public void WrapToCenter()
