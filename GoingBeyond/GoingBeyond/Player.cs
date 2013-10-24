@@ -19,7 +19,7 @@ namespace GoingBeyond
         public Int32 Score { get; set; }
         public Int32 Level { get; set; }
         public Int32 NumberOfLives { get; set; }
-        public Int32 SpeedMultiplier { get; set; }
+        public float SpeedMultiplier { get; set; }
         public Int32 ScoreMultiplier { get; set; }
         public AvatarRenderer AvatarRenderer { get; set; }
         public String PlayersName { get; set; }
@@ -82,7 +82,7 @@ namespace GoingBeyond
                 {
                     BulletList[i].Direction = Ship.RotationMatrix.Forward;
                     BulletList[i].Speed = GameConstants.BulletSpeedAdjustment;
-                    BulletList[i].Postion = Ship.Position + (200 * BulletList[i].Direction);
+                    BulletList[i].postion = Ship.Position + (200 * BulletList[i].Direction);
                     BulletList[i].IsActive = true;
                     break;
                 }
@@ -93,7 +93,7 @@ namespace GoingBeyond
         {
             ResetEnemyShips();
             ScoreMultiplier++;
-            SpeedMultiplier = SpeedMultiplier + 100;
+            SpeedMultiplier = SpeedMultiplier + 50;
             Level++;
         }
 
@@ -133,7 +133,7 @@ namespace GoingBeyond
                     {
                         if (BulletList[j].IsActive)
                         {
-                            var bulletSphere = new BoundingSphere(BulletList[j].Postion, bulletRadius);
+                            var bulletSphere = new BoundingSphere(BulletList[j].postion, bulletRadius);
 
                             if (enemySphere.Intersects(bulletSphere))
                             {

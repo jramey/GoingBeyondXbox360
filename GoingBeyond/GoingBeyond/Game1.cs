@@ -40,8 +40,8 @@ namespace GoingBeyondGame
         private Vector2 lifePosition = new Vector2(695, 25);
         private Vector2 gameOverPosition = new Vector2(330, 75);
         private Vector2 powerUpPostion = new Vector2(0, 0);
-        Player player;
-        List<Matrix> bonesWorldSpace;
+        private Player player;
+        private List<Matrix> bonesWorldSpace;
 
         public Game1()
         {
@@ -176,7 +176,7 @@ namespace GoingBeyondGame
 
             if (TitleScreenIsDisplayed(currentState))
                 StartGame();
-
+            
             if (player.Ship.IsActive && currentState.Triggers.Left > 0)
                 player.Ship.Velocity *= 1.05f;
 

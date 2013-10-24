@@ -106,7 +106,7 @@
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Xbox360Game1Content\GoingBeyondContent.contentproj">
+    <ProjectReference Include="..\GoingBeyondContent\GoingBeyondContent.contentproj">
       <Name>GoingBeyondContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
       <Project>{A55265A1-E0A2-406B-9DF3-857C1D659700}</Project>
